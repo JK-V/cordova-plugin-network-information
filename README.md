@@ -338,4 +338,9 @@ function onOffline() {
 }
 ```
  
+ ### For iPhone in IONIc
+ You will receive online and offline broadcasts a bit late when you are performing background to foreground operations(even you wait for 2-3 mints in background) or I would say if your app was in background and network is gone and you bring your app on screen it takes time to receive broadcast.
+ So, solution is to write your call to update screen in reception of broadcast receiver in ionic app.js.
+ This prob. has been tested on iPhone 6s phone and emulator. I struggled a lot behind this and I don't want anybody else to waste their time doing same.
+ 
 [Apache Cordova issue tracker]: https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20Network%20Information%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC
